@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 
-type instructionPage = 'htmlCss' | 'angularMaterial' | 'apiRest' | 'forms' | 'components'
+type instructionPage = 'htmlCss' | 'angularMaterial' | 'apiRest' | 'forms' | 'components' | 'logic' | 'debug'
 
 @Component({
   selector: 'challenge-header',
@@ -119,7 +119,30 @@ export class ChallengeHeaderComponent {
     <p>
     Puedes utilizar el <strong>cli</strong> o crear los componentes <strong>a mano</strong>
     </p>
-    `
+    `,
+    logic: `
+    <p>Crea una simple app de <strong>To-Do list</strong> que cumpla con las operaciones <strong>CRUD</strong></p>
+    <p>Tienes libertad para decidir cómo implementarlo</p>
+    <p>Como funciones mínimas debe poder:</p>
+    <ul>
+    <li>
+      Recuperar todas las tareas
+    </li>
+    <li>
+      Insertar una nueva tarea
+    </li>
+    <li>
+      Borrar una tarea
+    </li>
+    <li>
+    Filtrar las tareas por un input
+    </li>
+    </ul>
+    <p>
+    Puedes crear todos los componentes y servicios que necesites en <br><em>src/app/challenges/components/{{tuComponente}}/{{tuComponente}}.component.ts</em>
+    </p>
+    `,
+    debug: ''
   }
 
 }

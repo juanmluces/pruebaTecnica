@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-interface Module {
+interface ChallengeModule {
   logo: string;
   route: string;
   title: string;
@@ -14,7 +14,7 @@ interface Module {
 })
 export class DashboardPage {
 
-  modules: Array<Module> = [
+  challengeModules: Array<ChallengeModule> = [
     {
       logo: 'assets/images/html.png',
       route: 'html-css',
@@ -45,6 +45,12 @@ export class DashboardPage {
       title: 'Componentes',
       descriptionHTML: 'Crear componentes y transferir datos entre ellos'
     },
+    {
+      logo: 'assets/images/compiler.png',
+      route: 'logic',
+      title: 'Logic',
+      descriptionHTML: 'Crear una pequeña <strong>app de To-Do</strong>'
+    }
   ]
 
 }

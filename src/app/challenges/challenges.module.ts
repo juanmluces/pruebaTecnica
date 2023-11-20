@@ -11,18 +11,20 @@ import { AngularMaterialPage } from './pages/angular-material/angular-material.p
 import { ApiRestPage } from './pages/api-rest/api-rest.page';
 import { FormsPage } from './pages/forms/forms.page';
 import { CreateComponentsPage } from './pages/create-components/create-components.page';
+import { AppLogicPage } from './pages/app-logic/app-logic.page';
 
 
 
 @NgModule({
-  declarations: [HtmlCssPage, ChallengeHeaderComponent, AngularMaterialPage, ApiRestPage, FormsPage, CreateComponentsPage],
+  declarations: [HtmlCssPage, ChallengeHeaderComponent, AngularMaterialPage, ApiRestPage, FormsPage, CreateComponentsPage, AppLogicPage],
   imports: [
     CommonModule,
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
     RouterLink,
-    MatMenuModule
-  ]
+    MatMenuModule,
+  ],
+  exports: [ChallengeHeaderComponent]
 })
 export class ChallengesModule { }

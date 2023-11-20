@@ -6,11 +6,11 @@
 </header>
 <main>
   <mat-nav-list>
-    @for(module of modules; track module ){
-      <mat-list-item [routerLink]="module.route">
-        <img [src]="module.logo" matListItemAvatar>
-        <span matListItemTitle>{{ module.title }}</span>
-        <span matListItemLine [innerHTML]="module.descriptionHTML"></span>
+    @for(challenge of challengeModules; track challenge ){
+      <mat-list-item [routerLink]="challenge.route">
+        <img [src]="challenge.logo" matListItemAvatar>
+        <span matListItemTitle>{{ challenge.title }}</span>
+        <span matListItemLine [innerHTML]="challenge.descriptionHTML"></span>
       </mat-list-item>
     }
   </mat-nav-list>

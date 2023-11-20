@@ -6,6 +6,7 @@ import { AngularMaterialPage } from './challenges/pages/angular-material/angular
 import { ApiRestPage } from './challenges/pages/api-rest/api-rest.page';
 import { FormsPage } from './challenges/pages/forms/forms.page';
 import { CreateComponentsPage } from './challenges/pages/create-components/create-components.page';
+import { AppLogicPage } from './challenges/pages/app-logic/app-logic.page';
 
 const routes: Routes = [
   {
@@ -31,6 +32,10 @@ const routes: Routes = [
   {
     path: 'components',
     component: CreateComponentsPage
+  },
+  {
+    path: 'logic',
+    component: AppLogicPage
   },
   {
     path: '**',
