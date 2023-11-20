@@ -1,0 +1,13 @@
+<mat-toolbar color="primary">
+  <a routerLink="/" mat-icon-button>
+    <mat-icon>arrow_back</mat-icon>
+  </a>
+  <span>{{ title }}</span>
+  <button [mat-menu-trigger-for]="helpMenu"  mat-icon-button>
+    <mat-icon>help_outline</mat-icon>
+  </button>
+</mat-toolbar>
+
+<mat-menu class="help-menu" #helpMenu="matMenu">
+  <div class="menu-content" [innerHTML]="instructionsHtml[instructionPage]"></div>
+</mat-menu>

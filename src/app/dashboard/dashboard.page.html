@@ -1,0 +1,17 @@
+<header>
+  <mat-toolbar color="primary">
+    <mat-icon>dashboard</mat-icon>
+    <span>Dashboard</span>
+  </mat-toolbar>
+</header>
+<main>
+  <mat-nav-list>
+    @for(module of modules; track module ){
+      <mat-list-item [routerLink]="module.route">
+        <img [src]="module.logo" matListItemAvatar>
+        <span matListItemTitle>{{ module.title }}</span>
+        <span matListItemLine [innerHTML]="module.descriptionHTML"></span>
+      </mat-list-item>
+    }
+  </mat-nav-list>
+</main>
