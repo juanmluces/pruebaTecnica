@@ -1,5 +1,31 @@
 <header>
   <challenge-header [title]="'Formularios'" [instructionPage]="'forms'" />
 </header>
+<br>
+{{  FormContacto.errors | json  }}
 
-<!-- Puedes comenzar a partir de aquí ignorando la etiqueta header y challenge-header -->
+<div class="formulario">
+<form [formGroup]="FormContacto" (ngSubmit)="onSubmit()" >
+
+  <label for="name">Name</label>
+  <input type="text" placeholder="name" id="name" formControlName="name">
+
+  <label for="surname">Surname</label>
+  <input type="text" placeholder="surname" id="surname" formControlName="surname">
+
+  <label for="email">Email</label>
+  <input type="email" placeholder="email" id="email" formControlName="email">
+
+  <label for="adress">Adress</label>
+  <input type="text"  placeholder="adress" id="adress" formControlName="adress">
+
+  <label for="password">Password</label>
+  <input type="password" placeholder="password" id="password" formControlName="password">
+
+  <label for="repeatPassword"> Repeat Password</label>
+  <input type="password" placeholder="password repeat" id="password2" formControlName="password2">
+
+  <button [disabled]="FormContacto.invalid">Dale caña!</button>
+
+</form>
+</div>

@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, JsonPipe } from '@angular/common';
 import { HtmlCssPage } from './pages/html-css/html-css.page';
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatIconModule } from "@angular/material/icon";
@@ -12,6 +12,7 @@ import { ApiRestPage } from './pages/api-rest/api-rest.page';
 import { FormsPage } from './pages/forms/forms.page';
 import { CreateComponentsPage } from './pages/create-components/create-components.page';
 import { AppLogicPage } from './pages/app-logic/app-logic.page';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 
@@ -24,6 +25,8 @@ import { AppLogicPage } from './pages/app-logic/app-logic.page';
     MatButtonModule,
     RouterLink,
     MatMenuModule,
+    ReactiveFormsModule,
+    JsonPipe
   ],
   exports: [ChallengeHeaderComponent]
 })
